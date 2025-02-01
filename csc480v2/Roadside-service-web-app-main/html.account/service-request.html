@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Service</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUJueD5IgQqhwqUmEwk5sjAz6iZ0EKtss&callback=initMap" loading="lazy" defer></script>
+</head>
+
+<div id="live-chat">
+  <div class="chat-header">
+    <h4>Live Chat</h4>
+    <button id="close-chat">&times;</button>
+  </div>
+  <div class="chat-messages">
+    <div class="message">Hi! How can we assist you today?</div>
+  </div>
+  <div class="chat-input">
+    <input type="text" id="chat-input-box" placeholder="Type your message..." />
+    <button id="send-message">Send</button>
+  </div>
+</div>
+
+
+
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="C:\Users\ryana\OneDrive\Desktop\VS Code\logo.png" alt="Roadside Assistance Logo" class="logo">
+    </div>
+    <h1>Request Service</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="service-request.html" class="active">Request Service</a></li>
+        <li><a href="account.html">Account</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="service-request-form">
+      <h2>Request Assistance</h2>
+      <form id="serviceRequestForm">
+        <label for="customerName">Full Name:</label>
+        <input type="text" id="customerName" name="customerName" placeholder="Your name" required>
+        
+        <label for="customerEmail">Email Address:</label>
+        <input type="email" id="customerEmail" name="customerEmail" placeholder="Your email" required>
+        
+        <label for="serviceType">Type of Service Needed:</label>
+        <select id="serviceType" name="serviceType" required>
+          <option value="towing">Towing</option>
+          <option value="batteryJumpstart">Battery Jumpstart</option>
+          <option value="flatTire">Flat Tire Repair</option>
+          <option value="fuelDelivery">Fuel Delivery</option>
+        </select>
+
+        <label for="serviceLocation">Service Location:</label>
+        <input type="text" id="serviceLocation" name="serviceLocation" placeholder="Enter the location" required>
+
+        <label for="additionalDetails">Additional Details:</label>
+        <textarea id="additionalDetails" name="additionalDetails" placeholder="Provide any additional information"></textarea>
+
+        <button type="submit">Request Service</button>
+      </form>
+    </section>
+    <section id="service-map-section">
+      <h2>Locate Your Service Area</h2>
+      <div id="map" style="width: 100%; height: 400px;"></div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Roadside Assistance. All rights reserved.</p>
+  </footer>
+</body>
+</html>
